@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>exam</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>127.0.0.1/exam</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYoWE5TT2JqZWN0AAgAEQAaACQAKQAy
+			ADcASQBMAFEAUwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgA
+			nQC9AMIAzwDRANMA2ADjAOwA9wD6AQUBDgETASABIwAAAAAAAAIB
+			AAAAAAAAACkAAAAAAAAAAAAAAAAAAAEs
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 444}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>-- 데이터 조회
+SELECT * from model_info</string>
+		<string>-- 데이터 입력
+INSERT INTO model_info (name, model_num, model_type) VALUES('i5', '3550', 'Ivy Birdge')</string>
+		<string>-- 데이터 입력
+INSERT INTO model_info ('name', 'model_num', 'model_type') VALUES('i5', '3550', 'Ivy Birdge')</string>
+		<string>-- 데이터 입력
+
+INSERT INTO model_info 
+(name, model_num, model_type)
+VALUES
+('i3', '14100', 'Rabter Lake'),
+('i5', '12400F', 'Elthe Lake'),
+('i5', '13400F', 'Rabter Lake'),
+('i7', '13700F', 'Rabter Lake'),
+('i7', '6700', 'Sky Lake')</string>
+		<string>-- 데이터 입력
+
+INSERT INTO model_info 
+(name, mode_num, model_type)
+VALUES
+('i3', '14100', 'Rabter Lake'),
+('i5', '12400F', 'Elthe Lake'),
+('i5', '13400F', 'Rabter Lake'),
+('i7', '13700F', 'Rabter Lake'),
+('i7', '6700', 'Sky Lake')</string>
+		<string>DESC model_info</string>
+		<string>INSERT INTO model_info ('name', 'model_num', 'model_type') VALUES('22', 'ada', 'sds')</string>
+		<string>INSERT INTO model_info 
+('name', 'model_num', 'model_type') 
+VALUES
+('i3', '14100', 'Rabter Lake'),
+('i5', '12400F', 'Elthe Lake'),
+('i5', '13400F', 'Rabter Lake'),
+('i7', '13700F', 'Rabter Lake'),
+('i7', '6700', 'Sky Lake')</string>
+		<string>-- 데이터 입력
+INSERT INTO model_info ('name', 'model_num', 'model_type') VALUES('i7', '7770K', 'Kaby Lake')</string>
+		<string>INSERT INTO model_info ('name', 'model_num', 'model_type') 
+VALUES('i3', '14100', 'Rabter Lake'),
+('i5', '12400F', 'Elthe Lake'),
+('i5', '13400F', 'Rabter Lake'),
+('i7', '13700F', 'Rabter Lake'),
+('i7', '6700', 'Sky Lake')</string>
+		<string>INSERT INTO model_info VALUES('name', 'model_num', 'model_type') 
+VALUES('i3', '14100', 'Rabter Lake'),
+('i5', '12400F', 'Elthe Lake'),
+('i5', '13400F', 'Rabter Lake'),
+('i7', '13700F', 'Rabter Lake'),
+('i7', '6700', 'Sky Lake')</string>
+		<string>ALTER TABLE model_info MODIFY COLUMN model_type VARCHAR(30)</string>
+		<string>ALTER TABLE model_info MODIFY COLUMN model_type VARHCAR(30)</string>
+		<string>ALTER TABLE MODIFY COLUMN model_type VARHCAR(30)</string>
+		<string>INSERT INTO model_info VALUES('name', 'model_num', 'model_type') 
+VALUES('i3', '14100', 'Rabter Lake'),
+VALUES('i5', '12400F', 'Elthe Lake'),
+VALUES('i5', '13400F', 'Rabter Lake'),
+VALUES('i7', '13700F', 'Rabter Lake'),
+VALUES('i7', '6700', 'Sky Lake')</string>
+		<string>SELECT * from model_info</string>
+		<string>desc customer</string>
+		<string>SHOW TABles</string>
+		<string>CREATE TABLE CUSTOMER(
+	no INTEGER NOT NULL,
+	name CHAR(20) NOT NULL,
+	age TINYINT,
+	phone VARCHAR(20),
+	email VARCHAR(30) NOT NULL,
+	adress VARCHAR(50),
+	
+	PRIMARY KEY (no)
+)</string>
+		<string>CREATE TABLE CUSTOMER(
+	no INTEGER NOT NULL,
+	name CHAR(20) NOT NULL,
+	age TINYINT,
+	phone VARCHAR(20),
+	email VARCHAR(30) NOT NULL,
+	adress VARCHAR(50)
+	
+	PRIMARY KEY (no)
+)</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>11.1.2-MariaDB</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

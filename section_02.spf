@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>EXAM</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>127.0.0.1</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYoWE5TT2JqZWN0AAgAEQAaACQAKQAy
+			ADcASQBMAFEAUwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgA
+			nQC9AMIAzwDRANMA2ADjAOwA9wD6AQUBDgETASABIwAAAAAAAAIB
+			AAAAAAAAACkAAAAAAAAAAAAAAAAAAAEs
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 444}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string># DATABASE 생성 
+CREATE DATABASE MYDATA;
+
+# DATABASE 삭제
+DROP DATABASE MYDATA;
+
+# DATABASE 목록 조회
+SHOW DATABASES;
+
+# 데이터베이스가 없는 경우 오류를 발생시키지 않고 넘어가라 ~
+DROP DATABASE IF EXISTS MYDATA;
+
+# ------------------------------------------------------------
+CREATE DATABASE EXAM;
+
+# 해당 데이터베이스를 사용할거야~
+USE EXAM;
+
+# 테이블 생성 / 테이블명
+CREATE TABLE myproduct (
+	-- 이하 필드
+	mykey INT UNSIGNED AUTO_INCREMENT,			
+	productid TEXT,
+	title TEXT,
+	ori_price INT,
+	discount_price INT,
+	discount_percent INT,
+	delevery TEXT,
+	
+	PRIMARY KEY (MYKEY)			-- PRIMARY KEY : 고유값 ( UNIQUE, 중복X )
+);
+
+# TABLE 목록 조회
+SHOW TABLES;
+
+# TABLE 삭제
+DROP TABLE myproduct;
+
+# TABLE 구조 조회
+DESC myproduct;
+
+CREATE TABLE customer(
+	no INTEGER NOT NULL,
+	name CHAR(20) NOT NULL,
+	age TINYINT,
+	phone VARCHAR(20),
+	email VARCHAR(30) NOT NULL,
+	adress VARCHAR(50),
+	
+	PRIMARY KEY (no)
+);
+
+desc customer;
+# ------------------------------------------------------------
+-- 테이블에 새로운 컬럼 추가
+-- ALTER TABLE [테이블명] 'ADD COLUMN' [추가할 컬럼명] [컬럼 데이터형]
+ALTER TABLE customer ADD COLUMN model_type VARCHAR(10) NOT NULL;
+
+-- 컬럼의 타입을 변경
+-- ALTER TABLE [테이블명] 'MODIFY COLUMN' [변경할 컬럼명] [변경할 컬럼 타입]
+ALTER TABLE customer MODIFY COLUMN NAME VARCHAR(15);
+
+-- 컬럼명 변경
+-- ALTER TABLE [테이블명] 'CHANGE COLUMN' [기존 컬럼 명] [변경할 컬럼 명] [변경할 컬럼 타입]
+ALTER TABLE customer CHANGE COLUMN name modelname VARCHAR(10);
+
+-- 컬럼 삭제
+-- ALTER TABLE [테이블명] 'DROP COLUMN' [삭제할 컬럼 명];
+ALTER TABLE customer DROP COLUMN age;
+
+################################################################################
+-- 실습 =&gt; 테이블 생성 및 조회
+CREATE TABLE dummy(
+	id INT(10) UNSIGNED AUTO_INCREMENT,
+	name VARCHAR(50),
+	modelnumber VARCHAR(50),
+	series VARCHAR(30),
+	
+	PRIMARY KEY(id)
+);
+DESC dummy;
+
+ALTER TABLE dummy MODIFY COLUMN name VARCHAR(20) NOT NULL;
+ALTER TABLE dummy CHANGE COLUMN modelnumber model_num VARCHAR(10) NOT NULL;
+ALTER TABLE dummy CHANGE COLUMN series model_type VARCHAR(10) NOT NULL;
+
+DROP TABLE dummy;
+
+CREATE TABLE model_info(
+	id INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+	name VARCHAR(20) NOT NULL,
+	model_num VARCHAR(10) NOT NULL,
+	model_type VARCHAR(10) NOT NULL,
+	
+	PRIMARY KEY(id)
+);
+desc model_info;
+################################################################################
+/*
+	시간형 데이터 타입
+		- DATE
+			날짜 YYYY-MM-DD 형태의 기간 표현 데이터 타입
+		- TIME
+			시간 hh:mm:ss 형태의 기간 표현 데이터
+		- DATETIME
+			YYYY-MM_DD hh:mm:ss 형태
+		- TIMESTAMP
+			현재 시간을 YYYY-MM_DD hh:mm:ss 형태로 반환
+			
+	-------------------------------------------
+
+	UNSIGNED : 음수 자리값을 양수 자리값으로 대체
+				 -100 ~ 100 =&gt; 0 ~ 200
+*/
+</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>desc model_info</string>
+		<string>CREATE TABLE model_info(
+	id INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+	name VARCHAR(20) NOT NULL,
+	model_num VARCHAR(10) NOT NULL,
+	model_type VARCHAR(10) NOT NULL,
+	
+	PRIMARY KEY(id)
+)</string>
+		<string>DROP TABLE dummy</string>
+		<string>DESC dummy</string>
+		<string>ALTER TABLE dummy CHANGE series model_type VARCHAR(10) NOT NULL</string>
+		<string>ALTER TABLE dummy CHANGE modelnumber model_num VARCHAR(10) NOT NULL</string>
+		<string>ALTER TABLE dummy MODIFY COLUMN name VARCHAR(20) NOT NULL</string>
+		<string>desc dummy</string>
+		<string>CREATE TABLE dummy(
+	id INT(10) UNSIGNED AUTO_INCREMENT,
+	name VARCHAR(50),
+	modelnumber VARCHAR(50),
+	series VARCHAR(30),
+	
+	PRIMARY KEY(id)
+)</string>
+		<string>CREATE TABLE dummy(
+	id INT(10) UNSIGNED AUTO_INCREMENT,
+	name VARCHAR(50),
+	modelnumber VARCHAR(50),
+	series VARCHAR(30)
+	
+	PRIMARY KEY(id)
+)</string>
+		<string>CREATE TABLE dummy(
+	id INT(10) UNSIGNED AUTO_INCREMENT,
+	name VARCHAR(50),
+	modelnumber VARCHAR(50),
+	series VARCHAR(30)
+	
+	PRIMARY KEY (id)
+)</string>
+		<string>desc customer</string>
+		<string>-- 컬럼 삭제
+ALTER TABLE customer DROP COLUMN age</string>
+		<string>ALTER TABLE customer CHANGE COLUMN name modelname VARCHAR(10)</string>
+		<string>ALTER TABLE customer CHANGE COLUMN name modelname varchar(10)</string>
+		<string>CREATE TABLE customer(
+	no INTEGER NOT NULL,
+	name CHAR(20) NOT NULL,
+	age TINYINT,
+	phone VARCHAR(20),
+	email VARCHAR(30) NOT NULL,
+	adress VARCHAR(50),
+	
+	PRIMARY KEY (no)
+)</string>
+		<string>DROP TABLE customer</string>
+		<string>-- 컬럼의 타입을 변경
+-- ALTER TABLE [테이블명] MODIFY NAME VARCHAR(15);
+ALTER TABLE CUSTOMER MODIFY COLUMN NAME VARCHAR(15)</string>
+		<string>desc CUSTOMER</string>
+		<string>-- 컬럼의 타입을 변경
+ALTER TABLE CUSTOMER MODIFY NAME VARCHAR(15)</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>11.1.2-MariaDB</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
