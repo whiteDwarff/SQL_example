@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>EXAM</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>root@127.0.0.1</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYoWE5TT2JqZWN0AAgAEQAaACQAKQAy
+			ADcASQBMAFEAUwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgA
+			nQC9AMIAzwDRANMA2ADjAOwA9wD6AQUBDgETASABIwAAAAAAAAIB
+			AAAAAAAAACkAAAAAAAAAAAAAAAAAAAEs
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 444}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT * FROM model_info WHERE name = 'i7'</string>
+		<string>SELECT * FROM model_info WHERE id &lt; 3 OR id &gt; 6</string>
+		<string>SELECT * FROM model_info WHERE id &gt; 3 OR id &gt; 6</string>
+		<string>SELECT * FROM model_info WHERE id &gt; 3 AND id &lt; 7</string>
+		<string>SELECT * FROM model_info WHERE id &gt; 3 OR id &gt; 7</string>
+		<string>SELECT * FROM model_info WHERE id &gt; 3 AND id &gt; 7</string>
+		<string>-- WHERE : 조건에 대한 검색
+
+SELECT * FROM model_info WHERE id &lt; 3</string>
+		<string>SELECT * FROM model_info ORDER BY id ASC</string>
+		<string>-- DESC : 내림차순 99 ~ 0  / z ~ a
+-- ASC  : 오름차순 0  ~ 99 / a ~ z
+
+SELECT * FROM model_info ORDER BY id DESC</string>
+		<string>C</string>
+		<string>SELECT * FROM model_info ORDER BY id ㅁㄴㅊ</string>
+		<string>SELECT * FROM model_info ORDER BY id DESC</string>
+		<string>SELECT * FROM model_info ORDER BY id DESC:</string>
+		<string>select * from model_info</string>
+		<string>select * from myproduct</string>
+		<string>alter table model_info set mytable</string>
+		<string>alter table model_info mytable</string>
+		<string>select * from customer</string>
+		<string>desc customer</string>
+		<string>SHOW TABles</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>11.1.2-MariaDB</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

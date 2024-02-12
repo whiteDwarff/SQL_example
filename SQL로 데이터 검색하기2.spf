@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>EXAM</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>root@127.0.0.1</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYoWE5TT2JqZWN0AAgAEQAaACQAKQAy
+			ADcASQBMAFEAUwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgA
+			nQC9AMIAzwDRANMA2ADjAOwA9wD6AQUBDgETASABIwAAAAAAAAIB
+			AAAAAAAAACkAAAAAAAAAAAAAAAAAAAEs
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 444}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT * fROM model_info WHERE model_type = 'Kaby Lake' LIMIT 1</string>
+		<string>-- LIKE : 조건에 맞는 데이터만 검색하기 ( 특정문자열을 포함하는가? )
+
+-- 특정 값으로 시작되는 모든 값을 찾을 경우   : 'Value%'
+-- 특정 값이 포함되는 모든 값을 찾을 경우     : '%Value%'
+-- 특정 값으로 시작하고 뒤에 2글자가 있는 경우 : 'Value__'.   =&gt;  _는 글자수에 맞게 사용 가능
+
+
+SELECT * FROM model_info</string>
+		<string>SELECT * FROM model_info WHERE name = 'i7'</string>
+		<string>-- Q. 
+SELECT * FROM model_info WHERE model_num LIKE '7770%'</string>
+		<string>-- Q. 
+SELECT * FROM model_info WHERE model_num LIKE '7700%'</string>
+		<string>-- LIMIT : 결과중 일부 데이터만 가져오기 ( pagenation.. )
+--       : 0번부터 10번까지만 가져오기
+
+
+SELECT * FROM model_info LIMIT 0, 2</string>
+		<string>SELECT * FROM model_info WHERE model_num LIKE '%F%' AND id &lt; 5</string>
+		<string>SELECT * FROM model_info WHERE model_num LIKE '%F%' AND id = 2</string>
+		<string>SELECT * FROM model_info WHERE model_num LIKE '%F%' AND id = 1</string>
+		<string>SELECT * FROM model_info WHERE model_num LIKE '%F%'</string>
+		<string>SELECT * FROM model_info WHERE model_type LIKE '%Lake%'</string>
+		<string>-- LIKE : 조건에 맞는 데이터만 검색하기 ( 특정문자열을 포함하는가? )
+
+-- 특정 값으로 시작되는 모든 값을 찾을 경우   : 'Value%'
+-- 특정 값이 포함되는 모든 값을 찾을 경우     : '%Value%'
+-- 특정 값으로 시작하고 뒤에 2글자가 있는 경우 : 'Value__'
+
+
+SELECT * FROM model_info</string>
+		<string>SELECT * FROM model_info WHERE  LIKE '%Lake%'</string>
+		<string>SELECT * FROM model_info WHERE name LIKE '%7%'</string>
+		<string>SELECT * FROM model_info WHERE name LIKE '%i%'</string>
+		<string>-- LIKE : 조건에 맞는 데이터만 검색하기 ( 특정문자열을 포함하는가? )
+
+SELECT * FROM model_info</string>
+		<string>LIKE '%i%'</string>
+		<string>-- LIKE : 조건에 맞는 데이터만 검색하기 ( 특정문자열을 포함하는가? )
+
+SELECT * FROM model_info name LIKE '%i%'</string>
+		<string>-- LIKE : 조건에 맞는 데이터만 검색하기 ( 특정문자열을 포함하는가? )
+
+SELECT * FROM model_info LIKE name '%i%'</string>
+		<string>desc customer</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>11.1.2-MariaDB</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
